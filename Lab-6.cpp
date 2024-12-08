@@ -148,9 +148,11 @@ for (short i=0; i<n; i++)
         cin >> matrix[i][j];
 
 for (short i=0; i<n; i++)
+{
     for (short j=0; j<m; j++)
         cout << matrix[i][j] << " ";
-    cout << endl;
+cout << endl;
+}
 
 }
 
