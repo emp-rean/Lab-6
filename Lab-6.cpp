@@ -245,8 +245,8 @@ for(short i=0;i<n;i++)
 }
 
 int main() {
-//prog1();
-//prog2();
+prog1();
+prog2();
 prog3();
-//prog4();
+prog4();
 }
