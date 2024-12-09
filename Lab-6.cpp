@@ -140,16 +140,36 @@ for(short i=0;i<n;i++)
 
 void prog3() {
 short matrix[100][100];
-short n,m;
+short r,c;
 cout << "Enter matrix rows and columns: ";
-cin >> n >> m;
-for (short i=0; i<n; i++)
-    for (short j=0; j<m; j++)
+cin >> r >> c;
+for (short i=0; i<r; i++)
+    for (short j=0; j<c; j++)
         cin >> matrix[i][j];
-
-for (short i=0; i<n; i++)
+short multiple, t;
+short result = 1;
+for (short j=0; j<c; j++)
 {
-    for (short j=0; j<m; j++)
+    multiple = 1;
+    for (short i=0; i<r; i++)
+        {
+        multiple *= matrix[i][j];
+        }
+if (multiple > result)
+{
+result = multiple;
+t = j;
+}
+}
+for (short i=0; i<r; i++)
+{
+    matrix[i][t] = matrix[i][t] + 3;
+}
+
+
+for (short i=0; i<r; i++)
+{
+    for (short j=0; j<c; j++)
         cout << matrix[i][j] << " ";
 cout << endl;
 }
